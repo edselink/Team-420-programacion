@@ -30,3 +30,12 @@ private:
 	float gravedad;
 	bool colision;
 };
+
+class Personaje{
+public:
+	void setVida(int);
+	int getVida();
+private:
+	Sprite sprite;
+	int vida;
+};
