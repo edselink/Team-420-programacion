@@ -6,15 +6,18 @@ public:
 	~Motor();
 };
 
-typedef struct _punto {
+class Punto{
+public:
 	int x;
 	int y;
-} Punto;
+	int distanciaEntrePuntos(Punto punto);
+	void rotar(Punto punto, int grados);
+	void moverHaciaPunto(Punto punto, int velocidad);
+};
 
-class Sprite{
+class Sprite : public Punto{
 public:
 private:
-	Punto punto;
 	Imagen imagen;
 	Fisica fisica;
 };
